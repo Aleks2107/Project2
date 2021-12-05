@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <titlе>Главная: Городская библиотека</titlе>
+    </head>
+    <body>
+        <h1>Содержание</h1>
+        {% for bb in bbs %}
+        <div>
+            <h2>{{ bb.title }}</h2>
+            <p>{{ bb.auther }}</p>
+            <p>{{ bb.give_in|date:"d.m.Y Время: i:s" }}</p>
+        </div>
+        {% endfor %}
+    </body>
+</html>
